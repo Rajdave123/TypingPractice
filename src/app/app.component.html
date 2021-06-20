@@ -20,12 +20,12 @@
 
     <div class="columns">
       <div class="column">
-        <div *ngIf="sentence !== text" class="is-size-3 border">You Win!</div>
+        <div *ngIf="sentence === text" class="is-size-3 border">You Win!</div>
       </div>
       <div class="column">
         <div
           class="colum"
-          *ngIf="sentence !== text"
+          *ngIf="sentence === text"
           class="is-size-3 border"
           (click)="next()"
         >
