@@ -1,5 +1,6 @@
 :host {
   height: 100vh;
+  width:100%;
   display: grid;
   place-items: center;
   font-family: Roboto;
@@ -7,7 +8,7 @@
 }
 
 .box {
-  height: 70vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,12 +16,13 @@
 }
 .container {
   width: 800px;
-  height: 90vh;
+  min-height: 80vh;
 }
 
 h3 {
   font-weight: 500;
   color: black;
+  text-align: center;
 }
 
 hr {
@@ -39,11 +41,11 @@ input {
 }
 
 .border {
-  margin: 15px auto;
+  margin: 10px 1px;
   border: 3.5px solid red;
-  border-radius: 3%;
+  border-radius: 5%;
   color: rebeccapurple;
-  padding: 0 12px;
+  text-align: center;
   cursor: pointer;
   width: 200px;
 }
@@ -53,9 +55,41 @@ input {
 }
 
 .success {
-  color: green;
+  color: rgb(8, 8, 8);
 }
 
 .danger {
   color: red;
+}
+
+@media only screen and (max-width: 800px) {
+  .border {
+    border: 3px solid red;
+    border-radius: 3%;
+    color: rebeccapurple;
+    text-align: center;
+    cursor: pointer;
+    width: 153px;
+    font-size: 23px !important;
+  }
+
+  .columns {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  .container {
+    height: 80vh;
+  }
+
+input {
+  margin: 20px auto;
+  width: 500px;
+  height: 65px;
+  color: cadetblue;
+  font-size: large;
+  font-weight: 600;
+  text-align: center;
+  outline: none;
+}
 }
