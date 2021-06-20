@@ -3,18 +3,35 @@
     <h1 class="is-size-2">Typing Challange</h1>
     <hr />
     <h3 class="is-size-4">
-      <span [class]="compare(letter,text[i])" *ngFor="let letter of sentence.split(''); let i = index"
+      <span
+        [class]="compare(letter, text[i])"
+        *ngFor="let letter of sentence.split(''); let i = index"
         >{{ letter }}</span
       >
     </h3>
 
     <input
       name="text"
-      id="textarea"
+      [value]="text"
       (input)="changeText($event)"
-      placeholder="Enter a sentense shown above"
+      placeholder="Enter a sentense shown above carefully"
     />
-    <!-- {{ text }} -->
-    <div *ngIf="sentence === text" class="is-size-2 border">You Win!</div>
+    {{ text }}
+
+    <div class="columns is-5">
+      <div class="column">
+        <div *ngIf="sentence === text" class="is-size-2 border">You Win!</div>
+      </div>
+      <div class="column">
+        <div
+          class="colum"
+          *ngIf="sentence === text"
+          class="is-size-2 border"
+          (click)="next()"
+        >
+          Next ⏭️
+        </div>
+      </div>
+    </div>
   </div>
 </div>
