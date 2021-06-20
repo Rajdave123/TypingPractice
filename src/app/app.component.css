@@ -1,0 +1,59 @@
+:host {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Roboto;
+  letter-spacing: 1.5px;
+}
+
+.box {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  width: 800px;
+  height: 500px;
+}
+
+h3 {
+  font-weight: bold;
+  text-transform: lowercase;
+  color: black;
+}
+
+hr {
+  width: 500px;
+  background-color: rebeccapurple !important;
+  height: 2px solid;
+}
+input {
+  margin: 25px auto;
+  width: 600px;
+  height: 50px;
+  color: cadetblue;
+  font-size: large;
+}
+
+.border {
+  margin: 20px auto;
+  border: 3.5px solid red;
+  border-radius: 3%;
+  color: rebeccapurple;
+  padding: 0 12px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.pending {
+  color: black;
+}
+
+.success {
+  color: green;
+}
+
+.danger {
+  color: red;
+}
